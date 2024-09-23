@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+
+:root {
+  --yellow: #ff6347;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+/* Navbar container */
+.navbar {
+  position: relative;
+}
+
+/* Stars for animation */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation: star-animation 5s linear infinite;
+}
+
+@keyframes star-animation {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-700px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+*::selection {
+  background: var(--yellow);
+  color: #333;
+}
+
+html {
+  font-size: 60.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #222;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+}
+
+body {
+  background: #111;
+  overflow-x: hidden;
+  padding-left: 35rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 3rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.75rem;
+  border-radius: 5rem;
+  border: none;
+}
+
+.btn i {
+  padding: 0 0.5rem;
+  font-size: 1.8rem;
+}
+
+.btn:hover {
+  background: var(--yellow);
+}
+
+.heading {
+  text-align: center;
+  margin: 0.6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: 0.25rem solid #fff4;
+  color: #fff;
+}
+
+.heading span {
+  color: var(--yellow);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 35rem;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+header .user img {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 0.7rem solid var(--yellow);
+}
+
+header .user .name {
+  font-size: 3.2rem;
+  color: #fff;
+}
+
+header .user .post {
+  font-size: 2.2rem;
+  color: #eee;
+}
+
+header .navbar {
+  width: 100%;
+}
+
+header .navbar ul {
+  list-style: none;
+  padding: 1rem 3rem;
+}
+
+header .navbar ul li a {
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background: #333;
+  color: #fff;
+  font-size: 1.9rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+
+header .navbar ul li a:hover {
+  background: var(--yellow);
+}
+
+#menu {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  z-index: 1000;
+  display: none;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 0 15rem;
+}
+
+.home h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.home h1 {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.home h1 span {
+  color: var(--yellow);
+}
+
+.home p {
+  font-size: 1.75rem;
+  color: #eee;
+  padding: 1rem 0;
+}
+
+/* Add this to the CSS section */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.about .row .counter .box {
+  width: 20rem;
+  background: #222;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.about .row .counter .box:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.about .row .counter .box:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.about .row .counter .box:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.about .row .counter .box span {
+  font-size: 3rem;
+  color: var(--yellow);
+  display: block;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.about .row .counter .box h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.about .row .counter .box span {
+  animation-delay: 1s;
+}
+
+.about .row .counter .box h3 {
+  animation-delay: 1.3s;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+}
+
+.about .row .info {
+  flex: 1 1 48rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+
+.about .row .info h3 {
+  font-size: 1.75rem;
+  color: var(--yellow);
+  padding: 1rem 0;
+  font-weight: normal;
+}
+
+.about .row .info h3 span {
+  color: #eee;
+  padding: 0 0.5rem;
+}
+
+.about .row .counter {
+  flex: 1 1 48rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .row .counter .box {
+  width: 20rem;
+  background: #222;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.about .row .counter .box span {
+  font-size: 2rem;
+  color: var(--yellow);
+}
+
+.about .row .counter .box h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.btn:hover {
+  background: var(--yellow); /* Yellow on hover */
+  transform: scale(1.05); /* Slight scale up */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+.active {
+  background: var(--yellow) !important; /* Yellow on hover */
+  transform: scale(1.05); /* Slight scale up */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+.projects .box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.projects .box-container .box {
+  height: 20rem;
+  width: 26rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 1rem;
+  position: relative;
+}
+
+.projects .box-container .box div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.projects .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.projects .box-container .box:hover img {
+  transform: scale(1.2);
+  filter: blur(0.9rem);
+}
+
+.projects .box-container .box:hover {
+  cursor: pointer;
+}
+
+.projects .box-container .box:hover div {
+  width: 100%;
+  text-align: center;
+  top: 30%;
+  visibility: visible;
+  opacity: 0.9;
+  background: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: 900;
+}
+/* Contact Section Styles */
+.contact {
+  padding: 50px;
+  background-color: #000000;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.heading span {
+  color: #ff6347;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content {
+  flex: 1;
+  max-width: 45%;
+}
+
+.info .card {
+  background: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.info .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info .social-icons a {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.info .social-icons a:hover {
+  color: #ff6347;
+}
+
+form {
+  flex: 1;
+  max-width: 45%;
+}
+
+.box {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.box:focus {
+  border-color: #ff6347;
+}
+
+.message {
+  height: 250px;
+}
+
+.btn {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff4500;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .content,
+  form {
+    max-width: -1%;
+  }
+}
+
+.button-container {
+  margin-bottom: 20px; /* Reduce this value */
+}
+footer {
+  margin-top: 10px; /* Adjust this value as needed */
+}
+
+.bottom-nav {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
